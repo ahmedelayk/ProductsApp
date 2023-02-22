@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Products App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    <!-- <h2 id="demo" class="my-5"></h2> -->
+    <section class="my-5">
+      <div class="container">
+        <label for="productName" class="fw-bold">Product Name</label>
+        <input type="text" id="productName" class="mb-3 form-control" placeholder="Enter product name" required>
+        <label for="productPrice" class="fw-bold">Product Price</label>
+        <input type="number" id="productPrice" class="mb-3 form-control" placeholder="Enter product price" required>
+        <label for="productCategory" class="fw-bold">Product Category</label>
+        <input type="text" id="productCategory" class="mb-3 form-control" placeholder="Enter product category" required>
+        <label for="productDesc" class="fw-bold">Product Description</label>
+        <textarea id="productDesc" class="mb-3 form-control"
+          placeholder="Enter short description about the product"></textarea>
+        <button onclick="addProduct()" id="addBtn" class="btn btn-outline-success fw-bolder">Add Product</button>
+        <span id="editBtnspan"></span>
+      </div>
+    </section>
+    <section>
+      <div class="container my-5">
+        <div class="row  w-80  m-auto">
+          <div class="offset-2 col-7">
+            <input type="search" id="searchFeild" placeholder="Search By Name ..." class="form-control"
+              onkeyup="searchFunc(this.value)">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-outline-primary form-control" id="clrBtn" onclick="clearSearch()">Clear</button>
+          </div>
+        </div>
+        <div class="row  w-80 m-auto ">
+          <div id="searchResult" class="searchFieldDiv offset-2 col-7 my-2">
+          </div>
+          <div class="col-2">
+          </div>
+        </div>
+        <table class="table text-center">
+          <thead>
+            <th>product Name</th>
+            <th>product Price</th>
+            <th>product Category</th>
+            <th>product Desc</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </thead>
+          <tbody id="tableBody">
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/code.js"></script>
+  </body>
+
+</html>
